@@ -28,18 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myTarot정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnDone = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCard4 = new System.Windows.Forms.Button();
+            this.btnCard3 = new System.Windows.Forms.Button();
+            this.btnCard2 = new System.Windows.Forms.Button();
+            this.btnCard1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,24 +105,6 @@
             this.groupBox1.Text = "사용자 입력";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "궁금한 주제를 입력하세요";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(26, 77);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 106);
-            this.textBox1.TabIndex = 1;
-            // 
             // btnDone
             // 
             this.btnDone.Location = new System.Drawing.Point(371, 152);
@@ -126,22 +115,93 @@
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(26, 77);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(288, 106);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "궁금한 주제를 입력하세요";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnCard4);
+            this.groupBox2.Controls.Add(this.btnCard3);
+            this.groupBox2.Controls.Add(this.btnCard2);
+            this.groupBox2.Controls.Add(this.btnCard1);
+            this.groupBox2.Location = new System.Drawing.Point(14, 241);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(774, 280);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "카드 선택";
+            // 
+            // btnCard4
+            // 
+            this.btnCard4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCard4.BackgroundImage")));
+            this.btnCard4.Location = new System.Drawing.Point(589, 45);
+            this.btnCard4.Name = "btnCard4";
+            this.btnCard4.Size = new System.Drawing.Size(130, 204);
+            this.btnCard4.TabIndex = 3;
+            this.btnCard4.Text = "☀️";
+            this.btnCard4.UseVisualStyleBackColor = true;
+            // 
+            // btnCard3
+            // 
+            this.btnCard3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCard3.BackgroundImage")));
+            this.btnCard3.Location = new System.Drawing.Point(409, 45);
+            this.btnCard3.Name = "btnCard3";
+            this.btnCard3.Size = new System.Drawing.Size(130, 204);
+            this.btnCard3.TabIndex = 2;
+            this.btnCard3.Text = "🌑";
+            this.btnCard3.UseVisualStyleBackColor = true;
+            // 
+            // btnCard2
+            // 
+            this.btnCard2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCard2.BackgroundImage")));
+            this.btnCard2.Location = new System.Drawing.Point(233, 45);
+            this.btnCard2.Name = "btnCard2";
+            this.btnCard2.Size = new System.Drawing.Size(130, 204);
+            this.btnCard2.TabIndex = 1;
+            this.btnCard2.Text = "🫧";
+            this.btnCard2.UseVisualStyleBackColor = true;
+            // 
+            // btnCard1
+            // 
+            this.btnCard1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCard1.BackgroundImage")));
+            this.btnCard1.Location = new System.Drawing.Point(52, 45);
+            this.btnCard1.Name = "btnCard1";
+            this.btnCard1.Size = new System.Drawing.Size(130, 204);
+            this.btnCard1.TabIndex = 0;
+            this.btnCard1.Text = "✨";
+            this.btnCard1.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MyTarot.Properties.Resources.crystal_ball;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Location = new System.Drawing.Point(592, 36);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 199);
-            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.Size = new System.Drawing.Size(195, 199);
+            this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 752);
+            this.ClientSize = new System.Drawing.Size(800, 534);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -151,6 +211,7 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,6 +229,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnCard1;
+        private System.Windows.Forms.Button btnCard4;
+        private System.Windows.Forms.Button btnCard3;
+        private System.Windows.Forms.Button btnCard2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
