@@ -9,7 +9,7 @@ namespace MyTarot
     public partial class Form1 : Form
     {
 
-        List<string> results;
+        List<string> advices;
 
         public Form1()
         {
@@ -21,8 +21,8 @@ namespace MyTarot
         {
             try
             {
-                string filename = "results.csv";
-                results = File.ReadAllLines(filename).ToList();
+                string filename = "tarot_advice.csv";
+                advices = File.ReadAllLines(filename).ToList();
             }
             catch (FileNotFoundException ex)
             {
@@ -36,6 +36,13 @@ namespace MyTarot
             {
                 MessageBox.Show($"알 수 없는 오류가 발생함. \n{ex.Message}", "알 수 없는 오류!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private string GetAdvice()
+        {
+            Random random = new Random();
+            int index = random.Next(0, advices.Count);
+            return advices[index];
         }
 
 
@@ -71,7 +78,27 @@ namespace MyTarot
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string worry = tbWorry.Text;
+            string result = GetAdvice();
+            tbResult.Text = worry + Environment.NewLine + result;
+            SaveHistory($"{worry} | {result}");
 
+        }
+
+        private void SaveHistory(string history)
+        {
+            try
+            {
+                string filename = "history.csv";
+                File.AppendAllText(filename, history + Environment.NewLine);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                MessageBox.Show($"권한이 없음. \n{ex.Message}", "권한 오류");
+            }
+            catch (Exception ex) {
+                MessageBox.Show($"알 수 없는 오류 발생. \n{ex.Message}", "알 수 없는 오류 발생");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
