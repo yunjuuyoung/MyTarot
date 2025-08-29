@@ -63,7 +63,8 @@ namespace MyTarot
 
         private void myTarot정보ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormAbout form = new FormAbout();
+            form.ShowDialog();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -118,6 +119,26 @@ namespace MyTarot
                 form = new FormHistory(this);
                 form.Show();
             }
+        }
+
+        // 카드 누르면 결과 나오게 하는 건 구현 예정
+        private void btnCard1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnCard2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCard3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCard4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

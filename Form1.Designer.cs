@@ -78,7 +78,7 @@
             // 끝내기ToolStripMenuItem
             // 
             this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
-            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.끝내기ToolStripMenuItem.Text = "끝내기";
             this.끝내기ToolStripMenuItem.Click += new System.EventHandler(this.끝내기ToolStripMenuItem_Click);
             // 
@@ -163,42 +163,50 @@
             // btnCard4
             // 
             this.btnCard4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCard4.BackgroundImage")));
+            this.btnCard4.Enabled = false;
             this.btnCard4.Location = new System.Drawing.Point(589, 45);
             this.btnCard4.Name = "btnCard4";
             this.btnCard4.Size = new System.Drawing.Size(130, 204);
             this.btnCard4.TabIndex = 3;
             this.btnCard4.Text = "☀️";
             this.btnCard4.UseVisualStyleBackColor = true;
+            this.btnCard4.Click += new System.EventHandler(this.btnCard4_Click);
             // 
             // btnCard3
             // 
             this.btnCard3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCard3.BackgroundImage")));
+            this.btnCard3.Enabled = false;
             this.btnCard3.Location = new System.Drawing.Point(409, 45);
             this.btnCard3.Name = "btnCard3";
             this.btnCard3.Size = new System.Drawing.Size(130, 204);
             this.btnCard3.TabIndex = 2;
             this.btnCard3.Text = "🌑";
             this.btnCard3.UseVisualStyleBackColor = true;
+            this.btnCard3.Click += new System.EventHandler(this.btnCard3_Click);
             // 
             // btnCard2
             // 
             this.btnCard2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCard2.BackgroundImage")));
+            this.btnCard2.Enabled = false;
             this.btnCard2.Location = new System.Drawing.Point(233, 45);
             this.btnCard2.Name = "btnCard2";
             this.btnCard2.Size = new System.Drawing.Size(130, 204);
             this.btnCard2.TabIndex = 1;
             this.btnCard2.Text = "🫧";
             this.btnCard2.UseVisualStyleBackColor = true;
+            this.btnCard2.Click += new System.EventHandler(this.btnCard2_Click);
             // 
             // btnCard1
             // 
             this.btnCard1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCard1.BackgroundImage")));
+            this.btnCard1.Enabled = false;
             this.btnCard1.Location = new System.Drawing.Point(52, 45);
             this.btnCard1.Name = "btnCard1";
             this.btnCard1.Size = new System.Drawing.Size(130, 204);
             this.btnCard1.TabIndex = 0;
             this.btnCard1.Text = "✨";
             this.btnCard1.UseVisualStyleBackColor = true;
+            this.btnCard1.Click += new System.EventHandler(this.btnCard1_Click);
             // 
             // groupBox3
             // 
