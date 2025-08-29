@@ -79,11 +79,19 @@ namespace MyTarot
 
         private void button1_Click(object sender, EventArgs e)
         {
+            btnCard1.Enabled = true;
+            btnCard2.Enabled = true;
+            btnCard3.Enabled = true;
+            btnCard4.Enabled = true;
+
+        }
+
+        private void SaveResult()
+        {
             string worry = tbWorry.Text;
             string result = GetAdvice();
             tbResult.Text = worry + Environment.NewLine + result;
             SaveHistory($"{worry} | {result}");
-
         }
 
         private void SaveHistory(string history)
@@ -102,10 +110,6 @@ namespace MyTarot
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void 결과불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -121,24 +125,24 @@ namespace MyTarot
             }
         }
 
-        // 카드 누르면 결과 나오게 하는 건 구현 예정
         private void btnCard1_Click(object sender, EventArgs e)
         {
+            SaveResult();
         }
 
         private void btnCard2_Click(object sender, EventArgs e)
         {
-
+            SaveResult();
         }
 
         private void btnCard3_Click(object sender, EventArgs e)
         {
-
+            SaveResult();
         }
 
         private void btnCard4_Click(object sender, EventArgs e)
         {
-
+            SaveResult();
         }
     }
 }
