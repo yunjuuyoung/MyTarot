@@ -49,5 +49,10 @@ namespace MyTarot
         {
 
         }
+
+        private void 결과불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

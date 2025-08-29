@@ -36,18 +36,22 @@
             this.myTarot정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDone = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbWorry = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCard4 = new System.Windows.Forms.Button();
             this.btnCard3 = new System.Windows.Forms.Button();
             this.btnCard2 = new System.Windows.Forms.Button();
             this.btnCard1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tbResult = new System.Windows.Forms.TextBox();
+            this.결과불러오기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -64,6 +68,7 @@
             // 파일ToolStripMenuItem
             // 
             this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.결과불러오기ToolStripMenuItem,
             this.끝내기ToolStripMenuItem});
             this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
             this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
@@ -95,7 +100,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnDone);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbWorry);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 29);
             this.groupBox1.Name = "groupBox1";
@@ -115,13 +120,13 @@
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // tbWorry
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 77);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 106);
-            this.textBox1.TabIndex = 1;
+            this.tbWorry.Location = new System.Drawing.Point(26, 77);
+            this.tbWorry.Multiline = true;
+            this.tbWorry.Name = "tbWorry";
+            this.tbWorry.Size = new System.Drawing.Size(288, 106);
+            this.tbWorry.TabIndex = 1;
             // 
             // label1
             // 
@@ -145,6 +150,15 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "카드 선택";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(592, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(195, 199);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // btnCard4
             // 
@@ -186,20 +200,38 @@
             this.btnCard1.Text = "✨";
             this.btnCard1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // groupBox3
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(592, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 199);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.groupBox3.Controls.Add(this.tbResult);
+            this.groupBox3.Location = new System.Drawing.Point(12, 533);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(776, 139);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "카드 풀이";
+            // 
+            // tbResult
+            // 
+            this.tbResult.Location = new System.Drawing.Point(13, 21);
+            this.tbResult.Multiline = true;
+            this.tbResult.Name = "tbResult";
+            this.tbResult.ReadOnly = true;
+            this.tbResult.Size = new System.Drawing.Size(750, 105);
+            this.tbResult.TabIndex = 0;
+            // 
+            // 결과불러오기ToolStripMenuItem
+            // 
+            this.결과불러오기ToolStripMenuItem.Name = "결과불러오기ToolStripMenuItem";
+            this.결과불러오기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.결과불러오기ToolStripMenuItem.Text = "결과 불러오기";
+            this.결과불러오기ToolStripMenuItem.Click += new System.EventHandler(this.결과불러오기ToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 534);
+            this.ClientSize = new System.Drawing.Size(800, 700);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -213,6 +245,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,13 +262,16 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDone;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbWorry;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnCard1;
         private System.Windows.Forms.Button btnCard4;
         private System.Windows.Forms.Button btnCard3;
         private System.Windows.Forms.Button btnCard2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox tbResult;
+        private System.Windows.Forms.ToolStripMenuItem 결과불러오기ToolStripMenuItem;
     }
 }
 
